@@ -1,11 +1,13 @@
+'use client';
+
 import React from 'react'
 import { useTheme } from 'next-themes'
 
-const Navbar = () => {
+const Navbar1 = () => {
     const { setTheme } = useTheme()
   return (
-    <div><button onClick={()=>setTheme('dark')}>dark</button><button onClick={()=>setTheme('light')}>light</button></div>
+    <div className='z-40'><button onClick={()=>setTheme('dark')} className='bg-white'>dark</button><button onClick={()=>setTheme('light')}>light</button></div>
   )
 }
 
-export default Navbar
+export default Navbar1;
