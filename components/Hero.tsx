@@ -38,7 +38,7 @@ const Hero = () => {
       <div className='flex justify-center relative my-20 z-10'>
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
           <Typewriter words={titleWords} />
-          <p className='text-center text-xs md:text-lg xl:text-lg'>Hi, I am Jack, a software engineer with a passion for<WordFlipper words={passionWords}/></p>
+          <div className='text-center text-xs md:text-lg xl:text-lg'>Hi, I am Jack, a software engineer with a passion for<WordFlipper words={passionWords}/></div>
           <div className='py-4'>
             <ShinyButton text='See My Work' icon={<FaLocationArrow />}></ShinyButton>
           </div>

@@ -44,7 +44,7 @@ export const Typewriter = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-2 xl:items-center", className)}>
+    <div className={cn("flex space-x-1 my-2 md:items-center", className)}>
       <motion.div
         className="overflow-hidden pb-4"
         initial={{

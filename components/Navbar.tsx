@@ -1,13 +1,95 @@
-'use client';
+"use client";
+import React, { useState } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import { FaMoon } from "react-icons/fa";
 
-import React from 'react'
-import { useTheme } from 'next-themes'
-
-const Navbar1 = () => {
-    const { setTheme } = useTheme()
-  return (
-    <div className='z-40'><button onClick={()=>setTheme('dark')} className='bg-white'>dark</button><button onClick={()=>setTheme('light')}>light</button></div>
-  )
+interface NavItems{
+  name?: string;
+  link?: string;
+  icon?: JSX.Element;
+  theme?: string;
 }
+interface NavbarProps {
+  navItems: NavItems[];
+}
+const Navbar = (props: NavbarProps) => {
+  const { scrollYProgress } = useScroll();
+  const [visible, setVisible] = useState(true);
+  const { theme, setTheme } = useTheme();
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    // Check if current is not undefined and is a number
+    console.log(theme)
+    if (typeof current === "number") {
+      let direction = current! - scrollYProgress.getPrevious()!;
 
-export default Navbar1;
+      if (scrollYProgress.get() < 0.05) {
+        setVisible(true);
+      } else {
+        if (direction < 0) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    }
+  });
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{
+          opacity: 1,
+          y: -100,
+        }}
+        animate={{
+          y: visible ? 0 : -100,
+          opacity: visible ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.2,
+        }}
+        className={cn(
+          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4"
+        )}
+      >
+        {props.navItems.map((navItem: any, idx: number) => {
+          if (navItem.theme) {
+            return (
+              <div
+                key={`link=${idx}`}
+                onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}
+                className={cn(
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 cursor-pointer px-3"
+                )}
+              >
+                <span className="hidden sm:block text-sm" >{ theme === 'light'? <FaMoon /> : navItem.icon}</span>
+              </div>
+            )
+          }
+          return (
+            <Link
+              key={`link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              )}
+            >
+              <span className="block sm:hidden">{navItem.icon}</span>
+              <span className="hidden sm:block text-sm">{navItem.name}</span>
+            </Link>
+          )
+        })}
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
+export default Navbar;
