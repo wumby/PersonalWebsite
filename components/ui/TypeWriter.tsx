@@ -54,7 +54,7 @@ export const Typewriter = ({
           width: "fit-content",
         }}
         transition={{
-          duration: 2,
+          duration: 1,
           ease: "linear",
           delay: 1,
         }}

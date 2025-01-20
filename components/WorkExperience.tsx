@@ -153,8 +153,12 @@ const WorkExperience =() => {
       ),
     },
   ];
+
   return (
     <div className="w-full">
+      <h1 className="heading">
+        My <span className="text-purple">Work Experience</span>
+      </h1>
       <Timeline data={data} />
     </div>
   );

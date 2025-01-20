@@ -3,7 +3,6 @@ import React from 'react'
 interface ShinyButtonProps {
     text?: string;
     icon?: React.ReactNode;
-    position?: string;
     handleClick?: () => void;
 }
 const ShinyButton = (props: ShinyButtonProps) => {
