@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "./ui/TimeLine";
+import SectionHeader from "./SectionHeader";
 
 const WorkExperience =() => {
   const data = [
@@ -156,9 +157,7 @@ const WorkExperience =() => {
 
   return (
     <div className="w-full">
-      <h1 className="heading">
-        My <span className="text-purple">Work Experience</span>
-      </h1>
+      <SectionHeader text1='My Work' text2='Experience'/>
       <Timeline data={data} />
     </div>
   );

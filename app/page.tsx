@@ -1,11 +1,11 @@
 
 
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import { Button, MovingBorder } from "@/components/ui/Border";
+import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
-import { html } from "framer-motion/client";
-import { FaBriefcase, FaHome, FaMoon, FaSun } from "react-icons/fa";
+import { FaBriefcase, FaFolderOpen, FaHome, FaPhone, FaSun } from "react-icons/fa";
 
 export default function Home() {
   const navItems = [
@@ -15,9 +15,20 @@ export default function Home() {
       icon: <FaHome />
     },
     {
+      name: 'Projects',
+      link: '#projects',
+      icon: <FaFolderOpen />
+    },
+    {
       name: 'Experience',
-      link: '#work-experience',
+      link: '#experience',
       icon: <FaBriefcase />
+    },
+    
+    {
+      name: 'Contact',
+      link: '#contact',
+      icon: <FaPhone />
     },
     {
       icon: <FaSun />,
@@ -34,8 +45,14 @@ export default function Home() {
         <section id="hero" className="py-20 w-full h-screen">
           <Hero />
         </section>
-        <section id="work-experience" className="py-20 w-full">
+        <section id="projects" className="py-20 w-full">
+          <Projects />
+        </section>
+        <section id="experience" className="py-20 w-full">
           <WorkExperience />
+        </section>
+        <section id="contact" className="py-20 w-full">
+          <Contact />
         </section>
       </div>
 
