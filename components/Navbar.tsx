@@ -14,7 +14,7 @@ import { FaMoon } from "react-icons/fa";
 interface NavItems{
   name?: string;
   link?: string;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
   isIcon?: boolean;
 }
 interface NavbarProps {
