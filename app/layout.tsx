@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Jacks Website",
@@ -16,6 +18,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body 
       >
+        <Analytics />
+        <SpeedInsights />
          <ThemeProvider
             attribute="class"
             defaultTheme="dark"
