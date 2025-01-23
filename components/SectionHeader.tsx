@@ -5,8 +5,8 @@ import React from 'react'
 import { ColorfulText } from './ui/ColorfulText';
 
 interface SectionHeaderProps {
-    text1: string;
-    text2: string;
+    text1?: string;
+    text2?: string;
 }
 const SectionHeader = (props: SectionHeaderProps) => {
     const { theme } = useTheme();
@@ -19,7 +19,7 @@ const SectionHeader = (props: SectionHeaderProps) => {
     const renderLightHeading = () =>
     (
         <h1 className="heading">
-            {props.text1} <ColorfulText text={props.text2}></ColorfulText>
+            {props.text1} <ColorfulText text={props.text2 ?? ''}></ColorfulText>
         </h1>
     )
     return theme === 'light' ? renderLightHeading() : renderDarkHeading();

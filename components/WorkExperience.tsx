@@ -157,7 +157,7 @@ const WorkExperience =() => {
 
   return (
     <div className="w-full">
-      <SectionHeader text1='My Work' text2='Experience'/>
+      <SectionHeader text1='Work' text2='Experience'/>
       <Timeline data={data} />
     </div>
   );

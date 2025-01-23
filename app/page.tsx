@@ -4,8 +4,9 @@ import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
 import WorkExperience from "@/components/WorkExperience";
-import { FaBriefcase, FaFolderOpen, FaHome, FaPhone, FaSun } from "react-icons/fa";
+import { FaBriefcase, FaFolderOpen, FaHome, FaPhone, FaSun, FaUserFriends } from "react-icons/fa";
 
 export default function Home() {
   const navItems = [
@@ -24,6 +25,11 @@ export default function Home() {
       link: '#experience',
       icon: <FaBriefcase />
     },
+    {
+      name: 'Testimonials',
+      link: '#testimonials',
+      icon:<FaUserFriends />
+    },
     
     {
       name: 'Contact',
@@ -32,7 +38,7 @@ export default function Home() {
     },
     {
       icon: <FaSun />,
-      theme: 'dark'
+      isIcon: true
     }
   ]
 
@@ -50,6 +56,9 @@ export default function Home() {
         </section>
         <section id="experience" className="py-20 w-full">
           <WorkExperience />
+        </section>
+        <section id="testimonials" className="py-20 w-full">
+          <Testimonials />
         </section>
         <section id="contact" className="py-20 w-full">
           <Contact />

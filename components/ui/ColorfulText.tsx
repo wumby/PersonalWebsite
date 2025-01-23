@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export function ColorfulText({ text }: { text: string }) {
@@ -19,7 +19,7 @@ export function ColorfulText({ text }: { text: string }) {
   const [currentColors, setCurrentColors] = React.useState(colors);
   const [count, setCount] = React.useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       const shuffled = [...colors].sort(() => Math.random() - 0.5);
       setCurrentColors(shuffled);
@@ -27,6 +27,7 @@ export function ColorfulText({ text }: { text: string }) {
     }, 5000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return text.split("").map((char, index) => (

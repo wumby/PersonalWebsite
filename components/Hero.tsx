@@ -51,8 +51,8 @@ const Hero = () => {
   return (
     <div className=' pt-36'>
       <div>
-        <Spotlight className='top-10 left-full h-[80vh] w-50 z-20' fill='purple' />
-        <Spotlight className='top-28 left-80 h-[80vh] w-[50vw] z-20' fill="purple" />
+        <Spotlight className='top-28 left-20 h-[80vh] w-[50vw] z-20 lg:left-80' fill="purple" />
+        <Spotlight className='top-80 left-full h-[80vh] w-[50vw] z-20' fill="purple" />
       </div>
       <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-purple/[0.13] bg-grid-purple/[0.08] flex items-center justify-center absolute top-0 left-0 z-10">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
