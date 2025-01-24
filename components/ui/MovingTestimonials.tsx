@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import CustomImage from "../CustomImage";
 
 export const MovingTestomonials = ({
   items,
@@ -16,11 +17,13 @@ export const MovingTestomonials = ({
     name: string;
     title: string;
     image: string;
+    linkedIn: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  linkedIn?: string;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -64,11 +67,11 @@ export const MovingTestomonials = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
+        containerRef.current.style.setProperty("--animation-duration", "200s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "400s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "70s");
+        containerRef.current.style.setProperty("--animation-duration", "700s");
       }
     }
   };
@@ -76,7 +79,7 @@ export const MovingTestomonials = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 w-screen overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-screen overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] z-100",
         className
       )}
     >
@@ -90,10 +93,9 @@ export const MovingTestomonials = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[90vw] max-w-full relative rounded-2xl border border-b-0
-             flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[60vw]"
+            className="w-[90vw] max-w-full relative rounded-2xl border
+             flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[51vw] pb-7 dark:bg-[rgb(4,7,29)] bg-white "
             style={{
-              background: "rgb(4,7,29)",
               backgroundColor:
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
             }}
@@ -104,17 +106,19 @@ export const MovingTestomonials = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
+              <span className=" relative z-20 text-sm md:text-lg leading-[1.6] dark:text-white text-black-100 font-normal">
                 {item.quote}
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+              <div className="relative z-20 mt-6 flex flex-row items-center w-full">
                 <div className="me-3">
-                  <Image src={item.image} alt="profile" height={50} width={50}/>
+                  <Image src={item.image} alt="profile" height={75} width={75} className="rounded" />
                 </div>
                 <span className="flex flex-col gap-1">
-                  <span className="text-xl font-bold leading-[1.6] text-white">
-                    {item.name}
-                  </span>
+                  <a href={item.linkedIn ?? ''} target="_blank" rel="noopener noreferrer">
+                  <span className=" flex text-xl font-bold leading-[1.6] dark:text-white text-black-100 gap-2 cursor-pointer">
+                      {item.name}<CustomImage width={25} height={25}/>
+                    </span>
+                  </a>
                   <span className=" text-sm leading-[1.6] text-white-200 font-normal">
                     {item.title}
                   </span>

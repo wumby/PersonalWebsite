@@ -21,16 +21,17 @@ export default function Home() {
       icon: <FaFolderOpen />
     },
     {
+      name: 'Testimonials',
+      link: '#testimonials',
+      icon: <FaUserFriends />
+    },
+    {
       name: 'Experience',
       link: '#experience',
       icon: <FaBriefcase />
     },
-    {
-      name: 'Testimonials',
-      link: '#testimonials',
-      icon:<FaUserFriends />
-    },
-    
+
+
     {
       name: 'Contact',
       link: '#contact',
@@ -43,33 +44,25 @@ export default function Home() {
   ]
 
   return (
-
     <main className="relative overflow-x-hidden dark:bg-black-100 bg-white flex justify-center items-center flex-col mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
         <Navbar navItems={navItems}></Navbar>
-
         <section id="hero" className="py-20 w-full h-screen">
           <Hero />
         </section>
         <section id="projects" className="py-20 w-full">
           <Projects />
         </section>
-        <section id="experience" className="py-20 w-full">
-          <WorkExperience />
-        </section>
         <section id="testimonials" className="py-20 w-full">
           <Testimonials />
+        </section>
+        <section id="experience" className="py-20 w-full">
+          <WorkExperience />
         </section>
         <section id="contact" className="py-20 w-full">
           <Contact />
         </section>
       </div>
-
-
-
-
-
-
     </main>
   );
 }

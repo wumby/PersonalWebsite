@@ -5,6 +5,7 @@ import React from "react";
 
 import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "./3dCard";
+import ShinyButton from "./ShinyButton";
 
 const ProjectCard =() => {
   return (
@@ -42,13 +43,7 @@ const ProjectCard =() => {
           >
             Try now →
           </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Sign up
-          </CardItem>
+          <ShinyButton text="Check it out" />
         </div>
       </CardBody>
     </CardContainer>
