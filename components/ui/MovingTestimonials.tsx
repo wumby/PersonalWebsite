@@ -109,7 +109,7 @@ export const MovingTestomonials = ({
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <div className="me-3">
-                  <Image src={item.image} alt="profile" />
+                  <Image src={item.image} alt="profile" height={50} width={50}/>
                 </div>
                 <span className="flex flex-col gap-1">
                   <span className="text-xl font-bold leading-[1.6] text-white">
