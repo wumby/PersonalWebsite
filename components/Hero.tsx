@@ -7,7 +7,7 @@ import { WordFlipper } from './ui/WordFlipper';
 import { useTheme } from 'next-themes';
 import { BackgroundLines } from './ui/BackgroundLines';
 import { ColorfulText } from './ui/ColorfulText';
-import { Spotlight } from './ui/Spotlight';
+import  Spotlight  from './ui/Spotlight';
 
 const Hero = () => {
   const titleWords = [

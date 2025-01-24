@@ -156,7 +156,7 @@ const WorkExperience =() => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <SectionHeader text1='Work' text2='Experience'/>
       <Timeline data={data} />
     </div>
