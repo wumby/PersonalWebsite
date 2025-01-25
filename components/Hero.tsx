@@ -31,18 +31,6 @@ const Hero = () => {
       className: "text-purple dark:text-purple text-6xl"
     },
   ];
-  const titleWords2 = [
-
-    {
-      text: "To",
-    },
-    {
-      text: "My",
-    },
-    {
-      text: "Website"
-    },
-  ];
   const passionWords = ['learning', 'innovating', 'creating']
   const { theme } = useTheme();
   if (theme === 'light') {

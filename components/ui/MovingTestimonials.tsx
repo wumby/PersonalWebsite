@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import CustomImage from "../CustomImage";
 
 export const MovingTestomonials = ({
   items,
