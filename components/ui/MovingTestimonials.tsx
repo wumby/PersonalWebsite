@@ -67,11 +67,11 @@ export const MovingTestomonials = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "200s");
+        containerRef.current.style.setProperty("--animation-duration", "30s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "400s");
+        containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "700s");
+        containerRef.current.style.setProperty("--animation-duration", "70s");
       }
     }
   };
@@ -86,7 +86,7 @@ export const MovingTestomonials = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-[4rem] py-4 w-max flex-nowrap mb-[4rem]",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -94,7 +94,7 @@ export const MovingTestomonials = ({
         {items.map((item, idx) => (
           <li
             className="w-[90vw] max-w-full relative rounded-2xl border
-             flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[51vw] pb-7 dark:bg-[rgb(4,7,29)] bg-white "
+             flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[25vw] pb-7 dark:bg-[rgb(4,7,29)] bg-white "
             style={{
               backgroundColor:
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -115,8 +115,9 @@ export const MovingTestomonials = ({
                 </div>
                 <span className="flex flex-col gap-1">
                   <a href={item.linkedIn ?? ''} target="_blank" rel="noopener noreferrer">
-                  <span className=" flex text-xl font-bold leading-[1.6] dark:text-white text-black-100 gap-2 cursor-pointer">
-                      {item.name}<CustomImage width={25} height={25}/>
+                    <span className=" flex text-xl font-bold leading-[1.6] dark:text-white text-black-100 gap-2 cursor-pointer">
+                      {item.name} <Image src={'linkedInDark.svg'} alt={""} width={25} height={25} className="dark:hidden block" />
+                      <Image src={'linkedIn.svg'} alt={""} width={25} height={25} className="dark:block hidden" />
                     </span>
                   </a>
                   <span className=" text-sm leading-[1.6] text-white-200 font-normal">

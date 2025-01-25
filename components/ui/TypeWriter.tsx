@@ -44,7 +44,7 @@ export const Typewriter = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-2 md:items-center", className)}>
+    <div className={cn("flex space-x-1 my-2 items-center", className)}>
       <motion.div
         className="overflow-hidden pb-4"
         initial={{
@@ -60,7 +60,7 @@ export const Typewriter = ({
         }}
       >
         <div
-          className="text-3xl md:text-6xl xl:text-7xl font-bold"
+          className="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold"
           style={{
             whiteSpace: "nowrap",
           }}
@@ -82,7 +82,7 @@ export const Typewriter = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px]  h-8 sm:h-9 md:h-10 xl:h-12 bg-blue-500",
+          "block rounded-sm w-[4px]  h-9 sm:h-9 md:h-10 xl:h-12 bg-blue-500",
           cursorClassName
         )}
       ></motion.span>

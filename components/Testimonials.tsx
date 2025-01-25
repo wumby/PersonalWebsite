@@ -59,7 +59,7 @@ const Testimonials = () => {
   return (
     <div className='w-full'>
       <SectionHeader text1='Team' text2='Testimonials' />
-      <div className='flex flex-col justify-evenly h-[80vh] py-5'>
+      <div className='flex flex-col justify-evenly h-[100vh] py-5'>
         <div className="flex flex-col items-center max-lg:mt-10 mt-10">
           <div
             className="rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
