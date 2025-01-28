@@ -90,4 +90,12 @@ z-index: 0;
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  .page-container {
+    @apply relative overflow-x-hidden dark:bg-black-100 bg-white flex justify-center items-center flex-col mx-auto sm:px-10 px-5;
+  }
+
+  .section-container {
+    @apply py-20 w-full;
+  }
 }

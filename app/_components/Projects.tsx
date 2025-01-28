@@ -1,6 +1,6 @@
 import React from 'react'
-import  ProjectCard  from './ui/ProjectCard'
-import SectionHeader from './SectionHeader'
+import SectionHeader from '../../components/SectionHeader'
+import ProjectCard from '@/components/ProjectCard'
 
 const Projects = () => {
   return (

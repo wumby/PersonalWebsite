@@ -1,5 +1,5 @@
+import SectionHeader from '@/components/SectionHeader'
 import React from 'react'
-import SectionHeader from './SectionHeader'
 
 const Contact = () => {
     return (

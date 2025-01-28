@@ -1,8 +1,8 @@
 'use client';
 
+import { ColorfulText } from '@/components/ColorfulText';
 import { useTheme } from 'next-themes';
 import React from 'react'
-import { ColorfulText } from './ui/ColorfulText';
 
 interface SectionHeaderProps {
     text1?: string;

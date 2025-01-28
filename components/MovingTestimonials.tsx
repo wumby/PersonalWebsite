@@ -84,16 +84,16 @@ export const MovingTestomonials = ({
     >
       <ul
         ref={scrollerRef}
-        className={cn(
-          " flex min-w-full shrink-0 gap-[4rem] py-4 w-max flex-nowrap mb-[4rem]",
+        className={cn( 
+          " flex min-w-full shrink-0 gap-[4rem] py-4 w-max flex-nowrap mb-[2rem]",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="w-[90vw] max-w-full relative rounded-2xl border
-             flex-shrink-0 border-slate-800 p-5 md:p-16 sm:w-[50vw] 2xl:w-[25vw] pb-7 dark:bg-[rgb(4,7,29)] bg-white "
+            className="w-[50vw] max-w-full relative rounded-2xl border
+             flex-shrink-0 border-slate-800 p-5 xs:w-[70vw] sm:w-[50vw] 2xl:w-[25vw] pb-7 dark:bg-[rgb(4,7,29)] bg-white min-h-fit "
             style={{
               backgroundColor:
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",

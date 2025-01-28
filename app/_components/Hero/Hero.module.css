@@ -1,0 +1,25 @@
+.grid{
+    @apply h-screen w-full bg-white bg-grid-purple/[0.08] flex items-center justify-center absolute top-0 left-0 z-10;
+}
+
+.titleContainerLight{
+    @apply flex flex-col items-center justify-center;
+}
+.container{
+    @apply pt-36;
+}
+.content{
+    @apply flex justify-center relative my-20 z-30;
+}
+
+.gridDark{
+    @apply h-screen w-full bg-white  bg-grid-purple/[0.13] flex items-center justify-center absolute top-0 left-0 z-10;
+}
+
+.heroShadeLight{
+    @apply absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)];
+}
+
+.shade{
+    @apply absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)];
+}

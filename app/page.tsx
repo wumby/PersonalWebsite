@@ -1,13 +1,13 @@
 
 
-import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
-import Testimonials from "@/components/Testimonials";
-import WorkExperience from "@/components/WorkExperience";
+import Contact from "@/app/_components/Contact/Contact";
 import { FaBriefcase, FaFolderOpen, FaHome, FaPhone, FaSun, FaUserFriends } from "react-icons/fa";
-
+import './globals.css'
+import Navbar from "@/components/Navbar/Navbar";
+import Hero from "./_components/Hero/Hero";
+import Projects from "./_components/Projects";
+import Testimonials from "./_components/Testimonials";
+import WorkExperience from "./_components/WorkExperience";
 export default function Home() {
   const navItems = [
     {
@@ -44,22 +44,22 @@ export default function Home() {
   ]
 
   return (
-    <main className="relative overflow-x-hidden dark:bg-black-100 bg-white flex justify-center items-center flex-col mx-auto sm:px-10 px-5">
+    <main className="page-container">
       <div className="max-w-7xl w-full">
         <Navbar navItems={navItems}></Navbar>
-        <section id="hero" className="py-20 w-full h-screen">
+        <section id="hero" className="section-container h-screen">
           <Hero />
         </section>
-        <section id="projects" className="py-20 w-full">
+        <section id="projects" className="section-container">
           <Projects />
         </section>
-        <section id="testimonials" className="py-20 w-full">
+        <section id="testimonials" className="section-container">
           <Testimonials />
         </section>
-        <section id="experience" className="py-20 w-full">
+        <section id="experience" className="section-container">
           <WorkExperience />
         </section>
-        <section id="contact" className="py-20 w-full">
+        <section id="contact" className="section-container">
           <Contact />
         </section>
       </div>
