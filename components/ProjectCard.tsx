@@ -3,11 +3,49 @@
 import Image from "next/image";
 import React from "react";
 
-import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "./3dCard";
 import ShinyButton from "./ShinyButton";
+import { AnimatedTooltip } from "./AnimatedTooltip/AnimatedTooltip";
 
 const ProjectCard =() => {
+  const people = [
+    {
+      id: 1,
+      name: "NextJS",
+      image:
+        "/next.svg",
+    },
+    {
+      id: 2,
+      name: "React",
+      image:
+        "/react.svg",
+    },
+    {
+      id: 3,
+      name: "TypeScript",
+      image:
+        "/ts.svg",
+    },
+    {
+      id: 4,
+      name: "Tailwind CSS",
+      image:
+        "/tail.svg",
+    },
+    {
+      id: 5,
+      name: "Sanity",
+      image:
+        "/next.svg",
+    },
+    {
+      id: 6,
+      name: "Dora",
+      image:
+        "/next.svg",
+    },
+  ];
   return (
     <CardContainer className="inter-var shadow-[0_20px_50px_rgba(109,40,217)]">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -34,15 +72,8 @@ const ProjectCard =() => {
           />
         </CardItem>
         <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            as={Link}
-            href="https://twitter.com/mannupaaji"
-            target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-          >
-            Try now →
-          </CardItem>
+      <AnimatedTooltip items={people} />
+
           <ShinyButton text="Check it out" />
         </div>
       </CardBody>

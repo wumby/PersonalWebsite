@@ -21,4 +21,4 @@ export const titleWords = [
     },
   ];
 
-export const passionWords = ['learning', 'innovating', 'creating'];
+export const passionWords = ['testable.', 'scalable.', 'secure.', 'maintainable.'];

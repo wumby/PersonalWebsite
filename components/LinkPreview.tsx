@@ -29,7 +29,7 @@ export const LinkPreview = ({
   children,
   url,
   className,
-  width = 200,
+  width = 300,
   height = 125,
   quality = 50,
   layout = "fixed",
@@ -46,8 +46,8 @@ export const LinkPreview = ({
       colorScheme: "dark",
       "viewport.isMobile": true,
       "viewport.deviceScaleFactor": 1,
-      "viewport.width": width * 3,
-      "viewport.height": height * 3,
+      "viewport.width": width * 4,
+      "viewport.height": height * 4,
     });
     src = `https://api.microlink.io/?${params}`;
   } else {
@@ -110,6 +110,7 @@ export const LinkPreview = ({
           side="top"
           align="center"
           sideOffset={10}
+          avoidCollisions={false}
         >
           <AnimatePresence>
             {isOpen && (
@@ -133,17 +134,19 @@ export const LinkPreview = ({
               >
                 <Link
                   href={url}
-                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
+                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800 w-[30vh]"
                   style={{ fontSize: 0 }}
                 >
                   <Image
                     src={isStatic ? imageSrc : src}
-                    width={width}
-                    height={height}
+                    width={0}
+                    height={0}
+                    sizes="50vh"
+                    style={{ width: "100%", height: "auto" }} 
                     quality={quality}
                     layout={layout}
                     priority={true}
-                    className="rounded-lg"
+                    className="rounded-lg "
                     alt="preview image"
                   />
                 </Link>
