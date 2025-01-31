@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-import { useTheme } from "next-themes";
+
 
 const World = dynamic(() => import("../components/Globe").then((m) => m.World), {
   ssr: false,
 });
 
 export function GlobeDemo() {
-    const {theme} = useTheme();
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -31,7 +30,9 @@ export function GlobeDemo() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = theme === 'dark' ? ["#af06d4", "#af06d4", "#af06d4"] : ["#af06d4", "#d41606", "#93ec0a","#e9f82d", "#f82dc4"];
+
+  const colors =["#af06d4", "#af06d4", "#af06d4"];
+
   const sampleArcs = [
     {
       order: 1,
@@ -396,13 +397,11 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black-100 bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent  z-40" />
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
-      </div>
+    <>
+    <div className="w-full h-full cursor-pointer">
+    <World data={sampleArcs} globeConfig={globeConfig} />
     </div>
+      
+    </>
   );
 }

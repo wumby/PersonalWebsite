@@ -92,7 +92,7 @@ const ReviewCard = ({
     <LinkPreview imageSrc={linkImg} url={linkedIn} isStatic>
     <figure
       className={cn(
-        "relative w-[22rem] cursor-pointer rounded-xl border p-4 min-h-[20vh]",
+        "relative w-[22rem] cursor-pointer rounded-xl border p-4 h-[20vh] overflow-hidden",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles

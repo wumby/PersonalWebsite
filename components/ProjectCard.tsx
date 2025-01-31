@@ -79,7 +79,7 @@ const ProjectCard =() => {
         <div className="flex justify-between items-center mt-20">
       <AnimatedTooltip items={people} />
 
-          <ShinyButton text="Check it out" />
+          <ShinyButton text="Check it out" classes="w-[40px]"/>
         </div>
       </CardBody>
     </CardContainer>

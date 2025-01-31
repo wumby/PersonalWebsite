@@ -19,13 +19,13 @@ export default function Home() {
         <section id="projects" className="section-container">
           <Projects />
         </section>
-        <section id="testimonials" className="section-container">
+        <section id="testimonials" className="section-container h-screen">
           <Testimonials />
         </section>
         <section id="experience" className="section-container">
           <WorkExperience />
         </section>
-        <section id="contact" className="section-container">
+        <section id="contact" className="section-container h-screen">
           <Contact />
         </section>
       </div>

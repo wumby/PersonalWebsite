@@ -45,7 +45,7 @@ export function Marquee({
     <div
       {...props}
       className={cn(
-        "group flex p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
+        "group flex p-[5vh] [--duration:40s] [--gap:1.5rem] [gap:var(--gap)]",
         {
           "flex-row": !vertical,
           "flex-col": vertical,

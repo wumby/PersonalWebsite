@@ -24,6 +24,16 @@ const Contact = () => {
     <div className="w-full">
       <SectionHeader text1='Contact' text2='Me' />
       <div className='text-center text-sm md:text-lg xl:text-xl pt-8'>Reach Out and Connect – I’m Always Open to New Ideas!</div>
+      <div className='flex justify-center'>
+        <ShinyButton
+          text={copied ? "Email is Copied!" : "Copy my email address"}
+          icon={<FaCopy />}
+          handleClick={handleCopy}
+        ></ShinyButton>
+      </div>
+      <div className='w-full h-[40vh] flex justify-center'>
+        <GlobeDemo></GlobeDemo>
+      </div>
       <div className='flex justify-evenly'>
         <Button
           //   random duration will be fun , I think , may be not
@@ -41,7 +51,7 @@ const Contact = () => {
           // remove bg-white dark:bg-slate-900
           className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
         >
-          <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+          <div className="flex lg:flex-row flex-col lg:items-center p-4 gap-2 w-[10vh] h-[10vh]">
             <Image
             width={100}
             height={100}
@@ -67,7 +77,7 @@ const Contact = () => {
           // remove bg-white dark:bg-slate-900
           className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
         >
-          <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+          <div className="flex lg:flex-row flex-col lg:items-center p-4 gap-2 w-[10vh] h-[10vh]">
             <Image
             width={100}
             height={100}
@@ -79,16 +89,8 @@ const Contact = () => {
         </Button></LinkPreview>
 
       </div>
-      <div className='flex justify-center'>
-        <ShinyButton
-          text={copied ? "Email is Copied!" : "Copy my email address"}
-          icon={<FaCopy />}
-          handleClick={handleCopy}
-        ></ShinyButton>
-      </div>
-      <div>
-        <GlobeDemo></GlobeDemo>
-      </div>
+      
+      
       <p className="text-center text-gray-500 text-sm absolute bottom-0 left-0 ml-[5vh] mb-[5vh]">
   © {new Date().getFullYear()} Jack Ziegler. All rights reserved.
 </p>
