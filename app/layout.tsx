@@ -7,6 +7,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   title: "Jacks Website",
   description: "My personal website",
+  icons: {
+    icon: "/favicon.ico", // Default favicon
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

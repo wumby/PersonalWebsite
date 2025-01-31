@@ -21,4 +21,4 @@ export const titleWords = [
     },
   ];
 
-export const passionWords = ['testable.', 'scalable.', 'secure.', 'maintainable.'];
+export const passionWords = ['testable.', 'scalable.', 'secure.', 'maintainable.','optimized.'];

@@ -8,8 +8,8 @@ import { WordFlipper } from '@/components/WordFlipper';
 import { useTheme } from 'next-themes';
 import React from 'react'
 import { FaLocationArrow } from 'react-icons/fa';
-import { passionWords, titleWords, titleWords1 } from './Data';
 import classes from './Hero.module.css'
+import { passionWords, titleWords, titleWords1 } from '@/app/data';
 
 const Hero = () => {
 
@@ -17,7 +17,7 @@ const Hero = () => {
   if (theme === 'light') {
     return (
       <BackgroundLines className="pt-36">
-        <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-purple/[0.13] bg-grid-purple/[0.08] flex items-center justify-center absolute top-0 left-0">
+        <div className={`${classes.grid}`}>
           <div className={`${classes.shade}`} />
         </div>
         <div className='flex justify-center relative my-20 z-30'>
@@ -31,10 +31,10 @@ const Hero = () => {
             <div className='text-3xl  sm:hidden block'>
               To My Website
             </div>
-            <div className='text-center text-xs md:text-lg xl:text-lg pt-8'>Hi, I am Jack, an experienced software engineer with a focus on the users. 
+            <div className='text-center text-xs md:text-lg xl:text-lg pt-8'>Hi, I am Jack—an experienced software engineer with a focus on the users experience. 
               I design and build systems that solve real problems, ensuring every solution is easy to use, efficient, and<WordFlipper words={passionWords} /></div>
             <div className='py-4'>
-              <ShinyButton text='See My Work' icon={<FaLocationArrow />}></ShinyButton>
+              <ShinyButton text='See My Work' icon={<FaLocationArrow />} href='#projects'></ShinyButton>
             </div>
           </div>
         </div>
@@ -60,10 +60,10 @@ const Hero = () => {
           <div className='text-3xl  sm:hidden block pb-7'>
             To My Website
           </div>
-          <div className='text-center text-xs md:text-lg xl:text-lg'>Hi, I am Jack, an experienced software engineer with a focus on the users. 
+          <div className='text-center text-xs md:text-lg xl:text-lg'>Hi, I am Jack—an experienced software engineer with a focus on the users experience. 
           I design and build apps while ensuring every solution is easy to use, efficient, and<WordFlipper words={passionWords} /></div>
           <div className='py-4'>
-            <ShinyButton text='See My Work' icon={<FaLocationArrow />}></ShinyButton>
+            <ShinyButton text='See My Work' icon={<FaLocationArrow />} href='#projects'></ShinyButton>
           </div>
         </div>
       </div>

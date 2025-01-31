@@ -1,47 +1,13 @@
-
-
 import Contact from "@/app/_components/Contact/Contact";
-import { FaBriefcase, FaFolderOpen, FaHome, FaPhone, FaSun, FaUserFriends } from "react-icons/fa";
 import './globals.css'
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "./_components/Hero/Hero";
 import Projects from "./_components/Projects";
 import Testimonials from "./_components/Testimonials";
 import WorkExperience from "./_components/WorkExperience";
+import { navItems } from "./data";
 export default function Home() {
-  const navItems = [
-    {
-      name: 'Home',
-      link: '#hero',
-      icon: <FaHome />
-    },
-    {
-      name: 'Projects',
-      link: '#projects',
-      icon: <FaFolderOpen />
-    },
-    {
-      name: 'Testimonials',
-      link: '#testimonials',
-      icon: <FaUserFriends />
-    },
-    {
-      name: 'Experience',
-      link: '#experience',
-      icon: <FaBriefcase />
-    },
-
-
-    {
-      name: 'Contact',
-      link: '#contact',
-      icon: <FaPhone />
-    },
-    {
-      icon: <FaSun />,
-      isIcon: true
-    }
-  ]
+  
 
   return (
     <main className="page-container">

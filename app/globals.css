@@ -84,7 +84,7 @@ z-index: 0;
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+    @apply font-bold text-4xl md:text-5xl lg:text-7xl text-center;
   }
 
   .black-gradient {
