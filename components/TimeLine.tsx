@@ -38,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="flex justify-center mt-10">
         <h2 className="flex justify-center text-lg md:text-2xl lg:4xl mb-4 text-black dark:text-white w-full">
-          TimeLine of my Journey as a Software Engineer
+          Timeline of my Journey as a Software Engineer
         </h2>
       </div>
 

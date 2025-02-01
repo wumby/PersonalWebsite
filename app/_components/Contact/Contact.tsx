@@ -24,9 +24,12 @@ const Contact = () => {
     <div className="w-full">
       <SectionHeader text1='Contact' text2='Me' />
       <div className='text-center text-sm md:text-lg xl:text-xl pt-8 mb-8'>Reach Out and Connect – I’m Always Open to New Ideas!</div>
-      <div className='w-full h-[40vh] flex justify-center'>
+      <div className='w-full flex justify-center'>
+      <div className='w-[50vh] h-[40vh] flex justify-center'>
         <GlobeDemo></GlobeDemo>
       </div>
+      </div>
+
       <div className='flex justify-center items-center overflow-visible'>
       <LinkPreview url={'https://github.com/wumby'} imageSrc={'/github.png'} isStatic><Button
           duration={Math.floor(Math.random() * 10000) + 10000}
@@ -57,7 +60,7 @@ const Contact = () => {
           </div>
         </Button></LinkPreview>
 
-        <div className='mx-10 flex justify-center items-center h-[7vh]'>
+        <div className='mx-10 flex justify-center items-center h-[8vh]'>
         <ShinyButton
           text={copied ? "Email is Copied!" : "Copy my email address"}
           icon={<FaCopy />}
