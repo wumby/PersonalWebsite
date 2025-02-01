@@ -4,10 +4,9 @@ import Image from "next/image";
 import React from "react";
 
 import { CardBody, CardContainer, CardItem } from "./3dCard";
-import ShinyButton from "./ShinyButton";
 import { AnimatedTooltip } from "./AnimatedTooltip/AnimatedTooltip";
 
-const ProjectCard =() => {
+const ProjectCard = () => {
   const people = [
     {
       id: 1,
@@ -49,10 +48,10 @@ const ProjectCard =() => {
   return (
     <CardContainer className=" dark:shadow-[0_20px_50px_rgba(109,40,217)]">
       <div className="absolute inset-0 -z-10 blur-xl rounded-lg opacity-75 dark:hidden block"
-    style={{
-      background: "linear-gradient(45deg, red, blue, green, yellow)"
-    }}
-  />
+        style={{
+          background: "linear-gradient(45deg, red, blue, green, yellow)"
+        }}
+      />
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-auto sm:w-[30rem] h-auto p-6  ">
         <CardItem
           translateZ="50"
@@ -76,10 +75,8 @@ const ProjectCard =() => {
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
-      <AnimatedTooltip items={people} />
-
-          <ShinyButton text="Check it out" classes="w-[40px]"/>
+        <div className="flex items-center mt-20">
+          <AnimatedTooltip items={people} />
         </div>
       </CardBody>
     </CardContainer>

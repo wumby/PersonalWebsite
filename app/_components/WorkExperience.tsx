@@ -1,18 +1,26 @@
-import Image from "next/image";
 import React from "react";
 import SectionHeader from "../../components/SectionHeader";
 import { Timeline } from "@/components/TimeLine";
 
 const WorkExperience =() => {
+  const techStack = [
+    { name: "React", icon: "⚛️" },
+    { name: "Next.js", icon: "⏩" },
+    { name: "TypeScript", icon: "📘" },
+    { name: "Tailwind CSS", icon: "🎨" },
+    { name: "Framer Motion", icon: "🎭" },
+    { name: "GraphQL", icon: "🔮" },
+    { name: "Firebase", icon: "🔥" }
+  ];
   const data = [
     {
-      title: "Jan 2024 - Present",
+      title: "Oct 2024 - Present",
       content: (
         <div>
-            <h1 className="text-neutral-800 dark:text-neutral-200 text-lg md:text-xl font-normal mb-8">
-            Software Engineer - USWFS
+            <h1 className="text-neutral-800 dark:text-neutral-200 text-lg md:text-3xl font-normal mb-8 cursor-pointer">
+            Senior Software Engineer - USWFS
           </h1>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
             I usually run out of copy, but when I see content this big, I try to
             integrate lorem ipsum.
           </p>
@@ -20,44 +28,52 @@ const WorkExperience =() => {
             Lorem ipsum is for people who are too lazy to write copy. But we are
             not. Here are some more example of beautiful designs I built.
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/next.svg"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/next.svg"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/next.svg"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/next.svg"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
         </div>
+      ),
+    },
+    {
+      title: "Jan 2024 - Oct 2024",
+      content: (
+        <>
+        <div>
+            <h1 className="text-neutral-800 dark:text-neutral-200 text-lg md:text-3xl font-normal mb-8">
+            Software Developer - USWFS
+          </h1>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Tested internal applications and wrote tests for 25+ React Components. Utilized Vitest and React Testing 
+            Library to cover all user interaction cases
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Implemented new find and replace component that worked across all components of the application.
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+           Optimized API calls utilizing GraphQL and improved speed by 5X.
+          </p>
+          <div className="w-full max-w-2xl mx-auto p-6 bg-gray-900 text-white rounded-xl shadow-lg">
+      <h2 className="text-2xl font-bold text-center mb-4">Tech Stack</h2>
+      <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {techStack.map((tech) => (
+          <li
+            key={tech.name}
+            className="flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition"
+          >
+            <span className="text-4xl">{tech.icon}</span>
+            <span className="mt-2 text-sm font-semibold">{tech.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+          
+</div>
+</>
+        
       ),
     },
     {
       title: "May 2022 - Jan 2024",
       content: (
         <div>
-            <h1 className="text-neutral-800 dark:text-neutral-200 text-lg md:text-xl font-normal mb-8">
+            <h1 className="text-neutral-800 dark:text-neutral-200 text-lg md:text-3xl font-normal mb-8">
            Full Stack Engineer - Cognizant
           </h1>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
@@ -79,36 +95,6 @@ const WorkExperience =() => {
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
               ✅ Salman Bhai Fan Club registrations open
             </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/next.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/next.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/next.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/next.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
           </div>
         </div>
       ),

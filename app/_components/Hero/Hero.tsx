@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
             <div className='text-center text-xs md:text-lg xl:text-lg pt-8'>Hi, I am Jack—an experienced software engineer with a focus on the users experience. 
               I design and build systems that solve real problems, ensuring every solution is easy to use, efficient, and<WordFlipper words={passionWords} /></div>
-            <div className='py-4'>
+            <div className='mt-10'>
               <ShinyButton text='See My Work' icon={<FaLocationArrow />} href='#projects'></ShinyButton>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
           <div className='text-center text-xs md:text-lg xl:text-lg'>Hi, I am Jack—an experienced software engineer with a focus on the users experience. 
           I design and build apps while ensuring every solution is easy to use, efficient, and<WordFlipper words={passionWords} /></div>
-          <div className='py-4'>
+          <div className='mt-10'>
             <ShinyButton text='See My Work' icon={<FaLocationArrow />} href='#projects'></ShinyButton>
           </div>
         </div>
