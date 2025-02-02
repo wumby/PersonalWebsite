@@ -99,3 +99,24 @@ z-index: 0;
     @apply py-20 w-full;
   }
 }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animate-scroll-slow {
+  animation: scroll 23s linear infinite;
+  display: flex;
+  width: max-content;
+}

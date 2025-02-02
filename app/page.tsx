@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Hero from "./_components/Hero/Hero";
 import Projects from "./_components/Projects";
 import Testimonials from "./_components/Testimonials";
-import WorkExperience from "./_components/WorkExperience";
+import WorkExperience from "./_components/WorkExperience/WorkExperience";
 import { navItems } from "./data";
 export default function Home() {
   

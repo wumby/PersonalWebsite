@@ -65,7 +65,7 @@ const Contact = () => {
           text={copied ? "Email is Copied!" : "Copy my email address"}
           icon={<FaCopy />}
           handleClick={handleCopy}
-          classes='h-[5vh]'
+          classes='h-[5vh] mb-3'
         ></ShinyButton>
         </div>
        

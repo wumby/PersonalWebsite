@@ -37,7 +37,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="flex justify-center mt-10">
-        <h2 className="flex justify-center text-lg md:text-2xl lg:4xl mb-4 text-black dark:text-white w-full">
+        <h2 className="flex justify-center text-lg md:text-2xl lg:4xl mb-4 text-black dark:text-white w-full ">
           Timeline of my Journey as a Software Engineer
         </h2>
       </div>
@@ -52,7 +52,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-2xl font-bold text-neutral-500 dark:text-neutral-500 w-[25vh]">
                 {item.title}
               </h3>
             </div>
@@ -81,5 +81,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </div>
       </div>
     </div>
+    
   );
 };

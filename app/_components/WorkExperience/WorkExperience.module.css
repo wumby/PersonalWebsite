@@ -1,0 +1,7 @@
+.headings{
+    @apply text-neutral-800  text-xs lg:text-lg font-normal mb-8 md:mr-[23vh] lg:mr-[25vh];
+}
+
+.title{
+    @apply text-neutral-800  text-lg md:text-3xl font-normal mb-8 mr-[25vh];
+}

@@ -12,7 +12,7 @@ const ProjectCard = () => {
       id: 1,
       name: "NextJS",
       image:
-        "/next.svg",
+        "/nextTech.svg",
     },
     {
       id: 2,
@@ -34,15 +34,15 @@ const ProjectCard = () => {
     },
     {
       id: 5,
-      name: "Sanity",
+      name: "Prisma",
       image:
-        "/next.svg",
+        "/prisma.svg",
     },
     {
       id: 6,
-      name: "Dora",
+      name: "PostgreSQL",
       image:
-        "/next.svg",
+        "/postgres.svg",
     },
   ];
   return (
