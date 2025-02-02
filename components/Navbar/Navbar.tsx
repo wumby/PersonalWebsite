@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { FaMoon } from "react-icons/fa";
 
-interface NavItems{
+interface NavItems {
   name?: string;
   link?: string;
   icon?: React.ReactNode;
@@ -61,20 +61,26 @@ const Navbar = (props: NavbarProps) => {
             return (
               <div
                 key={`link=${idx}`}
-                onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}
+                onClick={() =>
+                  theme === "dark" ? setTheme("light") : setTheme("dark")
+                }
                 className={
                   "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 cursor-pointer pr-5"
                 }
               >
-                <span className="block sm:hidden">{ theme === 'light'? <FaMoon /> : navItem.icon}</span>
-                <span className="hidden sm:block text-sm">{ theme === 'light'? <FaMoon /> : navItem.icon}</span>
+                <span className="block sm:hidden">
+                  {theme === "light" ? <FaMoon /> : navItem.icon}
+                </span>
+                <span className="hidden sm:block text-sm">
+                  {theme === "light" ? <FaMoon /> : navItem.icon}
+                </span>
               </div>
-            )
+            );
           }
           return (
             <Link
               key={`link=${idx}`}
-              href={navItem.link ?? ''}
+              href={navItem.link ?? ""}
               className={
                 "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
               }
@@ -82,7 +88,7 @@ const Navbar = (props: NavbarProps) => {
               <span className="block sm:hidden">{navItem.icon}</span>
               <span className="hidden sm:block text-sm">{navItem.name}</span>
             </Link>
-          )
+          );
         })}
       </motion.div>
     </AnimatePresence>

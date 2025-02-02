@@ -11,45 +11,40 @@ const ProjectCard = () => {
     {
       id: 1,
       name: "NextJS",
-      image:
-        "/nextTech.svg",
+      image: "/nextTech.svg",
     },
     {
       id: 2,
       name: "React",
-      image:
-        "/react.svg",
+      image: "/react.svg",
     },
     {
       id: 3,
       name: "TypeScript",
-      image:
-        "/ts.svg",
+      image: "/ts.svg",
     },
     {
       id: 4,
       name: "Tailwind CSS",
-      image:
-        "/tail.svg",
+      image: "/tail.svg",
     },
     {
       id: 5,
       name: "Prisma",
-      image:
-        "/prisma.svg",
+      image: "/prisma.svg",
     },
     {
       id: 6,
       name: "PostgreSQL",
-      image:
-        "/postgres.svg",
+      image: "/postgres.svg",
     },
   ];
   return (
     <CardContainer className=" dark:shadow-[0_20px_50px_rgba(109,40,217)]">
-      <div className="absolute inset-0 -z-10 blur-xl rounded-lg opacity-75 dark:hidden block"
+      <div
+        className="absolute inset-0 -z-10 blur-xl rounded-lg opacity-75 dark:hidden block"
         style={{
-          background: "linear-gradient(45deg, red, blue, green, yellow)"
+          background: "linear-gradient(45deg, red, blue, green, yellow)",
         }}
       />
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-auto sm:w-[30rem] h-auto p-6  ">
@@ -81,6 +76,6 @@ const ProjectCard = () => {
       </CardBody>
     </CardContainer>
   );
-}
+};
 
 export default ProjectCard;

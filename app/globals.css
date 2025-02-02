@@ -78,8 +78,8 @@
   }
 }
 
-.data-radic-popper-content-wrapper{
-z-index: 0;
+.data-radic-popper-content-wrapper {
+  z-index: 0;
 }
 
 @layer utilities {

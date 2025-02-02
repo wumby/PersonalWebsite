@@ -2,10 +2,12 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-
-const World = dynamic(() => import("../components/Globe").then((m) => m.World), {
-  ssr: false,
-});
+const World = dynamic(
+  () => import("../components/Globe").then((m) => m.World),
+  {
+    ssr: false,
+  },
+);
 
 export function GlobeDemo() {
   const globeConfig = {
@@ -31,7 +33,7 @@ export function GlobeDemo() {
     autoRotateSpeed: 0.5,
   };
 
-  const colors =["#af06d4", "#af06d4", "#af06d4"];
+  const colors = ["#af06d4", "#af06d4", "#af06d4"];
 
   const sampleArcs = [
     {
@@ -398,10 +400,9 @@ export function GlobeDemo() {
 
   return (
     <>
-    <div className="w-full h-full cursor-pointer">
-    <World data={sampleArcs} globeConfig={globeConfig} />
-    </div>
-      
+      <div className="w-full h-full cursor-pointer">
+        <World data={sampleArcs} globeConfig={globeConfig} />
+      </div>
     </>
   );
 }

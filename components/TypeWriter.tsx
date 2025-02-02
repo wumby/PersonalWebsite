@@ -83,7 +83,7 @@ export const Typewriter = ({
         }}
         className={cn(
           "block rounded-sm w-[4px]  h-9 sm:h-9 md:h-10 xl:h-12 bg-blue-500",
-          cursorClassName
+          cursorClassName,
         )}
       ></motion.span>
     </div>

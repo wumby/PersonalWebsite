@@ -6,8 +6,7 @@ import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import countries from '../app/data/Globe.json'
-
+import countries from "../app/data/Globe.json";
 
 extend({ ThreeGlobe });
 
@@ -94,7 +93,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       _buildData();
       _buildMaterial();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globeRef.current]);
 
   const _buildMaterial = () => {
@@ -138,9 +137,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
       (v, i, a) =>
         a.findIndex((v2) =>
           ["lat", "lng"].every(
-            (k) => v2[k as "lat" | "lng"] === v[k as "lat" | "lng"]
-          )
-        ) === i
+            (k) => v2[k as "lat" | "lng"] === v[k as "lat" | "lng"],
+          ),
+        ) === i,
     );
 
     setGlobeData(filteredPoints);
@@ -167,25 +166,35 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .arcsData(data)
-      .arcStartLat((d: { startLat: number; }) => (d as { startLat: number }).startLat * 1)
-      .arcStartLng((d: { startLng: number; }) => (d as { startLng: number }).startLng * 1)
-      .arcEndLat((d: { endLat: number; }) => (d as { endLat: number }).endLat * 1)
-      .arcEndLng((d: { endLng: number; }) => (d as { endLng: number }).endLng * 1)
+      .arcStartLat(
+        (d: { startLat: number }) => (d as { startLat: number }).startLat * 1,
+      )
+      .arcStartLng(
+        (d: { startLng: number }) => (d as { startLng: number }).startLng * 1,
+      )
+      .arcEndLat(
+        (d: { endLat: number }) => (d as { endLat: number }).endLat * 1,
+      )
+      .arcEndLng(
+        (d: { endLng: number }) => (d as { endLng: number }).endLng * 1,
+      )
       .arcColor((e: any) => (e as { color: string }).color)
-      .arcAltitude((e: { arcAlt: number; }) => {
+      .arcAltitude((e: { arcAlt: number }) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
       .arcStroke((_e: any) => {
         return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
       })
       .arcDashLength(defaultProps.arcLength)
-      .arcDashInitialGap((e: { order: number; }) => (e as { order: number }).order * 1)
+      .arcDashInitialGap(
+        (e: { order: number }) => (e as { order: number }).order * 1,
+      )
       .arcDashGap(15)
       .arcDashAnimateTime((_e: any) => defaultProps.arcTime);
 
     globeRef.current
       .pointsData(data)
-      .pointColor((e: { color: string; }) => (e as { color: string }).color)
+      .pointColor((e: { color: string }) => (e as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
@@ -196,7 +205,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(
-        (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings
+        (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings,
       );
   };
 
@@ -208,11 +217,11 @@ export function Globe({ globeConfig, data }: WorldProps) {
       numbersOfRings = genRandomNumbers(
         0,
         data.length,
-        Math.floor((data.length * 4) / 5)
+        Math.floor((data.length * 4) / 5),
       );
 
       globeRef.current.ringsData(
-        globeData.filter((_d, i) => numbersOfRings.includes(i))
+        globeData.filter((_d, i) => numbersOfRings.includes(i)),
       );
     }, 2000);
 
@@ -223,8 +232,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
   return (
     <>
-    {/*eslint-disable-next-line @typescript-eslint/ban-ts-comment*/}
-    {/*@ts-expect-error */}
+      {/*eslint-disable-next-line @typescript-eslint/ban-ts-comment*/}
+      {/*@ts-expect-error */}
       <threeGlobe ref={globeRef} />
     </>
   );

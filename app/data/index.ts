@@ -1,2 +1,2 @@
-export * from './NavbarData';
-export * from './HeroData';
+export * from "./NavbarData";
+export * from "./HeroData";
