@@ -3,5 +3,5 @@
 }
 
 .title {
-  @apply text-neutral-800  text-lg md:text-3xl font-normal mb-8 mr-[25vh];
+  @apply text-neutral-800  text-lg md:text-3xl font-normal mb-8 md:mr-[25vh];
 }
