@@ -13,7 +13,7 @@ interface ProjectCardProps {
 }
 const ProjectCard = (props: ProjectCardProps) => {
   return (
-    <CardContainer className=" dark:shadow-[0_20px_50px_rgba(109,40,217)] mx-20">
+    <CardContainer className=" dark:shadow-[0_20px_50px_rgba(109,40,217)] mx-0 md:mx-20">
       <div
         className="absolute inset-0 -z-10 blur-xl rounded-lg opacity-75 dark:hidden block "
         style={{
