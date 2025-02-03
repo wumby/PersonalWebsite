@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeader from "../../components/SectionHeader";
-import { MarqueeDemo } from "@/components/MarqueeDemo";
+import { MovingTestominials } from "@/components/MovingTestominials";
 
 const Testimonials = () => {
   return (
@@ -9,7 +9,7 @@ const Testimonials = () => {
       <div className="flex flex-col justify-evenly h-full">
         <div className="flex flex-col items-center">
           <div className="rounded-md flex flex-col antialiased  items-center justify-center relative">
-            <MarqueeDemo />
+            <MovingTestominials />
           </div>
         </div>
       </div>

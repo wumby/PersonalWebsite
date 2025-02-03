@@ -2,14 +2,11 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-const World = dynamic(
-  () => import("../components/Globe").then((m) => m.World),
-  {
-    ssr: false,
-  },
-);
+const World = dynamic(() => import("./Globe").then((m) => m.World), {
+  ssr: false,
+});
 
-export function GlobeDemo() {
+export function WorldGlobe() {
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",

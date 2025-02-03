@@ -31,7 +31,7 @@ const reviews = [
   {
     name: "Mike Korth",
     username: "Front-End Engineer",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "Jack writes the kind of code you want to inherit—clean, well-structured, and easy to follow. No weird hacks, no over-engineering—just solid, maintainable code that makes life easier for everyone who touches it.",
     img: "/mike.jpg",
     linkedIn: "https://www.linkedin.com/in/mike-korth/",
     linkImg: "/mike.png",
@@ -55,7 +55,7 @@ const reviews = [
   {
     name: "Michael Krasilinec",
     username: "Software Developer",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "Jack is a great co-worker, follows through, and delivers quality work—every time. You never have to wonder if something will get done, it just does.",
     img: "/michael.jpg",
     linkedIn: "https://www.linkedin.com/in/michaelkrasilinec/",
     linkImg: "/michael.png",
@@ -63,17 +63,25 @@ const reviews = [
   {
     name: "Ankur Shahi",
     username: "Instructional Designer",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "Jack doesn’t just build things that work, he builds things that feel good to use. He has attention to detail, and makes sure the final product isn’t just functional, but actually intuitive and polished.",
     img: "/ankur.jpg",
     linkedIn: "https://www.linkedin.com/in/ankur-shahi/",
     linkImg: "/ankur.png",
+  },
+  {
+    name: "Alex Woodall",
+    username: "Full-Stack Engineer",
+    body: "Jack just makes things easy. Communicates well, keep things moving, and doesn't get caught up in unnecessary debates. If something needs fixing, he will fix it efficiently",
+    img: "/alex.jpg",
+    linkedIn: "https://www.linkedin.com/in/alexander-w-woodall/",
+    linkImg: "/alexL.png",
   },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({
+const TestimonialCard = ({
   img,
   name,
   username,
@@ -92,10 +100,8 @@ const ReviewCard = ({
     <LinkPreview imageSrc={linkImg} url={linkedIn} isStatic>
       <figure
         className={cn(
-          "relative w-[22rem] cursor-pointer rounded-xl border p-4 h-[20vh] overflow-hidden",
-          // light styles
+          "relative w-[22rem] cursor-pointer rounded-xl border p-4 h-[183px] overflow-hidden",
           "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-          // dark styles
           "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
         )}
       >
@@ -120,17 +126,17 @@ const ReviewCard = ({
   );
 };
 
-export function MarqueeDemo() {
+export function MovingTestominials() {
   return (
     <div className=" flex w-full flex-col items-center justify-center rounded-lg">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <TestimonialCard key={review.username} {...review} />
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover className="[--duration:20s]">
         {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <TestimonialCard key={review.username} {...review} />
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>

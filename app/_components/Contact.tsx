@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/Button";
-import { GlobeDemo } from "@/components/GlobeDemo";
+import { WorldGlobe } from "@/components/WorldGlobe";
 import { LinkPreview } from "@/components/LinkPreview";
 import SectionHeader from "@/components/SectionHeader";
 import ShinyButton from "@/components/ShinyButton";
@@ -28,7 +28,7 @@ const Contact = () => {
       </div>
       <div className="w-full flex justify-center">
         <div className="w-[50vh] h-[40vh] flex justify-center">
-          <GlobeDemo></GlobeDemo>
+          <WorldGlobe />
         </div>
       </div>
 
