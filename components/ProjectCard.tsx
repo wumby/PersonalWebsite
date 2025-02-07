@@ -9,6 +9,7 @@ interface ProjectCardProps {
   title: string;
   heading: string;
   image: string;
+  url?: string;
   tech: { id: number; name: string; image: string }[];
 }
 const ProjectCard = (props: ProjectCardProps) => {
@@ -43,7 +44,7 @@ const ProjectCard = (props: ProjectCardProps) => {
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex items-center mt-20">
+        <div className="flex items-center mt-20 w-[100%] justify-center gap-2">
           <AnimatedTooltip items={props.tech} />
         </div>
       </CardBody>
