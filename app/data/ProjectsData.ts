@@ -31,6 +31,19 @@ export const project1Data = [
   },
 ];
 
+export const project1Features = [
+  "COMING SOON!",
+  "COMING SOON!",
+  "COMING SOON!",
+];
+
+export const project2Features = [
+  "Modern and interactive home page",
+  "Random lineup generator using teams players",
+  "Page with full roster and players information",
+  "Fan-Zone features like apparel and highlight clips",
+];
+
 export const project2Data = [
   {
     id: 1,

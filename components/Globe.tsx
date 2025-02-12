@@ -92,8 +92,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     if (globeRef.current) {
       _buildData();
       _buildMaterial();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    } 
   }, [globeRef.current]);
 
   const _buildMaterial = () => {
