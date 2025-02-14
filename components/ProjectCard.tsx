@@ -23,7 +23,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           background: "linear-gradient(45deg, red, blue, green, yellow)",
         }}
       />
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-auto sm:w-[30rem] h-[550px] p-6  ">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-auto sm:w-[30rem] min-h-[550px] p-6  ">
         <CardItem
           translateZ="50"
           className="text-2xl font-bold text-neutral-600 dark:text-white text-center w-full flex justify-center"
