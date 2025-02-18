@@ -52,7 +52,7 @@ const ProjectCard = (props: ProjectCardProps) => {
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
+        <div className="flex justify-between items-center mt-20 w-full">
           <div className="flex items-center w-[100%] justify-start gap-2 z-[200]">
             <AnimatedTooltip items={props.tech} />
           </div>
