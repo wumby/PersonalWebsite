@@ -7,7 +7,7 @@ const reviews = [
   {
     name: "Syam Alakula",
     username: "Java Developer",
-    body: "Working with Jack as a backend dev has been smooth from day one. He asks the right questions, and creates a clean, well-structured UI that makes our backend services shine.",
+    body: "Working with Jack as a backend dev has been smooth from day one. He asks the right questions, and creates a clean, well structured UI that makes our backend services shine.",
     img: "/syam.png",
     linkedIn: "https://www.linkedin.com/in/syam-alakula/",
     linkImg: "/syam2.png",
@@ -23,7 +23,7 @@ const reviews = [
   {
     name: "Marcus Longwell",
     username: "Senior Software Engineer",
-    body: "I know I can always count on Jack to deliver solid work. He takes ownership, thinks through problems, and doesn't need hand-holding.",
+    body: "I know I can always count on Jack to deliver solid work. He takes ownership, thinks through problems, and doesn't need hand holding.",
     img: "/marcus.jpg",
     linkedIn: "https://www.linkedin.com/in/marcuslongwell/",
     linkImg: "/marcus.png",
@@ -31,7 +31,7 @@ const reviews = [
   {
     name: "Mike Korth",
     username: "Front-End Engineer",
-    body: "Jack writes the kind of code you want to inherit—clean, well-structured, and easy to follow. No weird hacks, no over-engineering—just solid, maintainable code that makes life easier for everyone who touches it.",
+    body: "Jack writes the kind of code you want to inherit, clean, well structured, and easy to follow. No weird hacks, no over engineering, just solid, maintainable code that makes life easier for everyone who touches it.",
     img: "/mike.jpg",
     linkedIn: "https://www.linkedin.com/in/mike-korth/",
     linkImg: "/mike.png",
@@ -55,7 +55,7 @@ const reviews = [
   {
     name: "Michael Krasilinec",
     username: "Software Developer",
-    body: "Jack is a great co-worker, follows through, and delivers quality work—every time. You never have to wonder if something will get done, it just does.",
+    body: "Jack is a great co-worker, follows through, and delivers quality work every time. You never have to wonder if something will get done, it just does.",
     img: "/michael.jpg",
     linkedIn: "https://www.linkedin.com/in/michaelkrasilinec/",
     linkImg: "/michael.png",
