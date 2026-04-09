@@ -30,10 +30,13 @@ export function HomeScreen({ projects }: HomeScreenProps) {
       <div className="home-ambient home-ambient-amber" />
 
       <header className="identity-strip">
-        <div className="identity-strip-name">Jack Ziegler</div>
+        <div className="identity-strip-copy">
+          <div className="identity-strip-name">Jack Ziegler</div>
+          <p className="identity-strip-subtitle">My projects</p>
+        </div>
         <div className="identity-strip-links">
           <Link
-            href="https://www.linkedin.com/in/jackziegler"
+            href="https://www.linkedin.com/in/jack-ziegler-350447176/"
             target="_blank"
             rel="noopener noreferrer"
             className="identity-link"

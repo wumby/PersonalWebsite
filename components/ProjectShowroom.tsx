@@ -100,18 +100,11 @@ export function ProjectShowroom({
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.22, ease: "easeOut" }}
         >
-          <div className="showroom-info-bridge" />
           <h2 className="showroom-project-title">{activeProject.title}</h2>
+          <div className="showroom-info-bridge" />
           <p className="showroom-project-description">
             {activeProject.shortDescription}
           </p>
-          <div className="showroom-stack">
-            {activeProject.techStack.slice(0, 3).map((item) => (
-              <span key={item} className="showroom-tech-pill">
-                {item}
-              </span>
-            ))}
-          </div>
           <div className="showroom-actions">
             {activeProject.liveUrl ? (
               <Link
@@ -123,12 +116,6 @@ export function ProjectShowroom({
                 Visit
               </Link>
             ) : null}
-            <Link
-              href={activeProject.detailsUrl}
-              className="home-secondary-action"
-            >
-              View More
-            </Link>
           </div>
         </motion.div>
       </AnimatePresence>

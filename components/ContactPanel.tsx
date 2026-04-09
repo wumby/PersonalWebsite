@@ -12,7 +12,7 @@ const links = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com",
-    value: "linkedin.com/in/jackziegler",
+    value: "linkedin.com/in/jack-ziegler-350447176",
   },
   {
     label: "Email",

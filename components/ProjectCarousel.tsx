@@ -193,9 +193,6 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
                       </div>
                     </div>
                     <div className="carousel-card-actions">
-                      <Link href={project.detailsUrl} className="premium-button">
-                        View More
-                      </Link>
                       {project.liveUrl ? (
                         <Link
                           href={project.liveUrl}
