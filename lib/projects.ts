@@ -49,7 +49,7 @@ export const projects: Project[] = [
     shortDescription: "A franchise-style team site with sharper identity, energy, and polish.",
     description:
       "A franchise-style web presence for an NBA 2K team, blending roster storytelling, identity, and fan energy.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"],
     image: "/beaniesquad.png",
     liveUrl: "https://beanie-squad.vercel.app/",
     githubUrl: "https://github.com/wumby",

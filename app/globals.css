@@ -340,7 +340,7 @@
   }
 
   .showroom-project-description {
-    @apply mx-auto mt-1 max-w-xl text-[0.8rem] text-slate-200/80;
+    @apply mx-auto mt-1 max-w-xl text-[0.88rem] text-slate-200/80;
   }
 
   .showroom-stack {
@@ -458,7 +458,7 @@
   }
 
   .showroom-project-description {
-    @apply mx-auto text-center text-[0.72rem];
+    @apply mx-auto text-center text-[0.8rem];
   }
 
   .showroom-actions {
@@ -476,5 +476,9 @@
   .home-primary-action,
   .home-secondary-action {
     @apply min-h-11 px-4 text-[0.64rem];
+  }
+
+  .home-primary-action {
+    min-width: 10.5rem;
   }
 }

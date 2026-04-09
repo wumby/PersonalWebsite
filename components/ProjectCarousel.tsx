@@ -185,7 +185,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
                         {project.description}
                       </p>
                       <div className="carousel-card-stack">
-                        {project.techStack.slice(0, 4).map((item) => (
+                        {project.techStack.map((item) => (
                           <span key={item} className="pill">
                             {item}
                           </span>

@@ -77,7 +77,7 @@ export function ProjectMedia3D({
         </div>
 
         <div className="showroom-media-meta">
-          {techStack.slice(0, 3).map((item) => (
+          {techStack.map((item) => (
             <span key={item}>{item}</span>
           ))}
         </div>
