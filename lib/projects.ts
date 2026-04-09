@@ -21,7 +21,7 @@ export const projects: Project[] = [
     shortDescription: "Short term Memento polaroid app.",
     description:
       "A memory-first product that turns capture, recall, and prioritization into a calm, polished daily workflow.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    techStack: ["Swift", "SwiftUI", "iOS", "Xcode"],
     image: "/forgetful.png",
     liveUrl: "https://forgetful.website",
     githubUrl: "https://github.com/wumby",

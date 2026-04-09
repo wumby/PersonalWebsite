@@ -427,17 +427,17 @@
   }
 
   .showroom-shell {
-    @apply grid-rows-[auto_minmax(0,1fr)] px-2 pb-2 pt-[4.1rem];
+    @apply grid-rows-[auto_minmax(0,1fr)] px-2 pb-2 pt-[4.95rem];
   }
 
   .showroom-floating-info {
-    @apply mb-2 max-w-[22rem] px-0;
+    @apply mt-12 mb-0 max-w-[24rem] px-0;
   }
 
   .showroom-card {
     @apply w-[92vw] max-w-[25rem] rounded-[1.7rem] p-2.5;
     height: min(46svh, 24rem);
-    bottom: 16%;
+    bottom: 20%;
   }
 
   .showroom-card-media {
@@ -454,24 +454,27 @@
   }
 
   .showroom-project-title {
-    @apply text-[1.7rem];
+    @apply text-center text-[2.15rem] leading-[0.95];
   }
 
   .showroom-project-description {
-    @apply text-[0.72rem];
+    @apply mx-auto text-center text-[0.72rem];
   }
 
   .showroom-actions {
-    @apply mt-3 grid grid-cols-2 gap-2;
+    @apply mt-3 flex justify-center gap-2;
   }
 
   .showroom-controls {
     @apply mt-2;
   }
 
+  .showroom-controls-bottom {
+    bottom: 10%;
+  }
+
   .home-primary-action,
   .home-secondary-action {
     @apply min-h-11 px-4 text-[0.64rem];
   }
-
 }
