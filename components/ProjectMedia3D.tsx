@@ -57,6 +57,7 @@ export function ProjectMedia3D({
               sizes="(max-width: 1024px) 80vw, 36rem"
               className="object-cover brightness-[1.04] contrast-[1.04] saturate-[1.03]"
               priority={active}
+              loading={active ? "eager" : "lazy"}
             />
           </div>
           {active ? (

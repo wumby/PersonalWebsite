@@ -125,6 +125,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 sizes="100vw"
                 className="object-cover"
                 priority
+                loading="eager"
               />
             </div>
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,10,20,0.04),rgba(7,10,20,0.16)_36%,rgba(7,10,20,0.9)_100%),linear-gradient(135deg,rgba(255,255,255,0.16),transparent_30%)]" />
