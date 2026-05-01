@@ -9,8 +9,6 @@ type ProjectMedia3DProps = {
   alt: string;
   active: boolean;
   accent: ProjectAccent;
-  title: string;
-  status: string;
   techStack: string[];
 };
 
@@ -26,8 +24,6 @@ export function ProjectMedia3D({
   alt,
   active,
   accent,
-  title,
-  status,
   techStack,
 }: ProjectMedia3DProps) {
   return (
@@ -43,11 +39,6 @@ export function ProjectMedia3D({
       <div className={`showroom-media-glow bg-gradient-to-br ${accentMap[accent]}`} />
       <div className="showroom-media-backplate" />
       <div className="showroom-media-shell">
-        <div className="showroom-media-topline">
-          <span>{title}</span>
-          <span>{status}</span>
-        </div>
-
         <div className="showroom-media-frame">
           <div className="showroom-media-image-wrap">
             <Image

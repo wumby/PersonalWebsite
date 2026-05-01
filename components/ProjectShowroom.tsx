@@ -177,8 +177,6 @@ export function ProjectShowroom({
                     alt={project.title}
                     active={isActive}
                     accent={project.accent}
-                    title={project.title}
-                    status={project.status}
                     techStack={project.techStack}
                   />
                 </div>

@@ -152,8 +152,6 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
                   alt={project.title}
                   active={isActive}
                   accent={project.accent}
-                  title={project.title}
-                  status={project.status}
                   techStack={project.techStack}
                 />
               </div>
