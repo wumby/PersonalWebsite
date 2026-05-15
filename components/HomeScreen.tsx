@@ -1,28 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { ProjectShowroom } from "@/components/ProjectShowroom";
+import { motion } from "framer-motion";
+import { ProjectCard } from "@/components/ProjectCard";
 import type { Project } from "@/lib/projects";
 
 type HomeScreenProps = {
   projects: Project[];
 };
 
-function wrapIndex(index: number, length: number) {
-  return (index + length) % length;
-}
-
 export function HomeScreen({ projects }: HomeScreenProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const goTo = (nextIndex: number) => {
-    setActiveIndex(wrapIndex(nextIndex, projects.length));
-  };
-
-  const goNext = () => goTo(activeIndex + 1);
-  const goPrevious = () => goTo(activeIndex - 1);
-
   return (
     <main className="home-screen">
       <div className="home-ambient-grid" />
@@ -30,37 +17,38 @@ export function HomeScreen({ projects }: HomeScreenProps) {
       <div className="home-ambient home-ambient-amber" />
 
       <header className="identity-strip">
+        <Link
+          href="https://www.linkedin.com/in/jack-ziegler-350447176/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="identity-link"
+        >
+          LinkedIn
+        </Link>
         <div className="identity-strip-copy">
           <div className="identity-strip-name">Jack Ziegler</div>
           <p className="identity-strip-subtitle">My projects</p>
         </div>
-        <div className="identity-strip-links">
-          <Link
-            href="https://www.linkedin.com/in/jack-ziegler-350447176/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="identity-link"
-          >
-            LinkedIn
-          </Link>
-          <Link
-            href="https://github.com/wumby"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="identity-link"
-          >
-            GitHub
-          </Link>
-        </div>
+        <Link
+          href="https://github.com/wumby"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="identity-link"
+        >
+          GitHub
+        </Link>
       </header>
 
-      <ProjectShowroom
-        projects={projects}
-        activeIndex={activeIndex}
-        onPrevious={goPrevious}
-        onNext={goNext}
-        onGoTo={goTo}
-      />
+      <motion.div
+        className="project-grid"
+        initial="hidden"
+        animate="show"
+        variants={{ show: { transition: { staggerChildren: 0.1 } } }}
+      >
+        {projects.map((project) => (
+          <ProjectCard key={project.slug} project={project} />
+        ))}
+      </motion.div>
     </main>
   );
 }
