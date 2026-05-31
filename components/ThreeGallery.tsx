@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,6 +28,7 @@ export function ThreeGallery({ projects }: { projects: Project[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const activeRef = useRef<number>(1);
   const [activeIdx, setActiveIdx] = useState<number>(1);
+  const visibleProjects = useMemo(() => projects.slice(0, FRAME_CFG.length), [projects]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -72,7 +73,7 @@ export function ThreeGallery({ projects }: { projects: Project[] }) {
 
     const loader = new THREE.TextureLoader();
 
-    projects.forEach((project, i) => {
+    visibleProjects.forEach((project, i) => {
       const cfg = FRAME_CFG[i];
       const group = new THREE.Group();
       group.position.set(cfg.x, cfg.y, cfg.z);
@@ -206,7 +207,7 @@ export function ThreeGallery({ projects }: { projects: Project[] }) {
       const hits = raycaster.intersectObjects(hitMeshes);
       if (hits.length) {
         const { idx } = hits[0].object.userData as { idx: number };
-        const url = projects[idx].liveUrl;
+        const url = visibleProjects[idx].liveUrl;
         if (url) window.open(url, "_blank", "noopener,noreferrer");
       }
     };
@@ -277,9 +278,9 @@ export function ThreeGallery({ projects }: { projects: Project[] }) {
       ro.disconnect();
       renderer.dispose();
     };
-  }, [projects]);
+  }, [visibleProjects]);
 
-  const active = projects[activeIdx];
+  const active = visibleProjects[activeIdx] ?? visibleProjects[0];
 
   return (
     <div className="gallery-wrap">

@@ -57,4 +57,18 @@ export const projects: Project[] = [
     status: "Live",
     category: "Sports / Community",
   },
+  {
+    slug: "tanks-oui",
+    title: "Tanks Oui",
+    shortDescription: "A fast browser tank battle game with arcade arena energy.",
+    description:
+      "A polished web game built around quick tactical movement, responsive combat, and a compact arcade loop.",
+    techStack: ["JavaScript", "HTML Canvas", "CSS", "Cloudflare Pages"],
+    image: "/tanks-oui.png",
+    liveUrl: "https://tanks-oui.pages.dev/",
+    githubUrl: "https://github.com/wumby",
+    accent: "amber",
+    status: "Live",
+    category: "Game",
+  },
 ];
